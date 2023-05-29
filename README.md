@@ -11,12 +11,13 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+WebUrlStrategy inspired by url_strategy
+
+"url_strategy" package has not been maintained for more than 2 years and seems to cause problems since Flutter 3.10 (Dart3), so I created my own package.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Package for Flutter apps that allows setting the web URL strategy with a single line of code.
 
 ## Getting started
 
