@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:web_url_strategy/web_url_strategy.dart';
 
 void main() {
-
+  //Set path url strategy before runApp
+  //https://docs.flutter.dev/ui/navigation/url-strategies#configuring-the-url-strategy
+  WebUrlStrategy().setPathUrlStrategy();
   runApp(const MyApp());
 }
 
@@ -73,7 +76,7 @@ class DetailScreen extends StatelessWidget {
         child: Center(
           child: ElevatedButton(
             onPressed: () => context.go(StringPaths.home),
-            child: const Text("Open DetailScreen"),
+            child: const Text("Close DetailScreen"),
           ),
         ),
       ),

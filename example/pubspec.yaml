@@ -44,7 +44,7 @@ dependencies:
     # the parent directory to use the current plugin's version.
     #path: ../
     git:
-      url: git@github.com:keybow007/go_background_flutter.git
+      url: git@github.com:keybow007/web_url_strategy.git
 
 dev_dependencies:
   flutter_test:

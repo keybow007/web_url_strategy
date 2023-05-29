@@ -12,4 +12,4 @@ class UrlStrategyImplMobile implements WebUrlStrategy {
   void setPathUrlStrategy() {}
 }
 
-WebUrlStrategy getUrlStrategy() => UrlStrategyImplMobile();
+WebUrlStrategy getWebUrlStrategy() => UrlStrategyImplMobile();
