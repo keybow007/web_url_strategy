@@ -11,9 +11,9 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-WebUrlStrategy inspired by url_strategy
+Configuring the URL strategy on the web plugin inspired by [url_strategy](https://pub.dev/packages/url_strategy)
 
-"url_strategy" package has not been maintained for more than 2 years and seems to cause problems since Flutter 3.10 (Dart3), so I created my own package.
+["url_strategy"](https://pub.dev/packages/url_strategy) package has not been maintained for more than 2 years and seems to cause [problem](https://github.com/simpleclub/url_strategy/issues/38) since Flutter 3.10 (Dart3), so I created my own package. 
 
 ## Features
 
@@ -21,20 +21,29 @@ Package for Flutter apps that allows setting the web URL strategy with a single 
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Since this is not a package published to "pub.dev", you can install this package by making the following settings in the pubspec.yaml file.
+
+```
+  web_url_strategy:
+    git:
+      url: git@github.com:keybow007/web_url_strategy.git
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Set URL strategy before runApp method
+
+- PathUrlStrategy : WebUrlStrategy.setPathUrlStrategy
+- HashUrlStrategy : WebUrlStrategy.setHashUrlStrategy
+
+See the official Flutter reference below for more details on the differences between the two strategies
+https://docs.flutter.dev/ui/navigation/url-strategies
 
 ```dart
-const like = 'sample';
+void main() {
+  //Set path url strategy before runApp
+  WebUrlStrategy().setPathUrlStrategy();
+  runApp(const MyApp());
+}
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
